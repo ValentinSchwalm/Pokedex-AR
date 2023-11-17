@@ -20,7 +20,7 @@ public class ImageRecognitionExample : MonoBehaviour
 
     public void OnDisable()
     {
-        _arTrackedImageManager.trackedImagesChanged += OnImageChanged;
+        _arTrackedImageManager.trackedImagesChanged -= OnImageChanged;
     }
 
     public void OnImageChanged(ARTrackedImagesChangedEventArgs args)
