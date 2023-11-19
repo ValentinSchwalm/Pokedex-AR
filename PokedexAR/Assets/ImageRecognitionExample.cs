@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
@@ -7,6 +8,7 @@ using UnityEngine.XR.ARFoundation;
 public class ImageRecognitionExample : MonoBehaviour
 {
     private ARTrackedImageManager _arTrackedImageManager;
+    [SerializeField] private TextMeshProUGUI infoText;
 
     //private GameObject[] placedObjects;
     //private Dictionary<string, GameObject> arObjects = new Dictionary<string, GameObject>();
@@ -37,6 +39,7 @@ public class ImageRecognitionExample : MonoBehaviour
         foreach (var trackedImage in args.added)
         {
             Debug.Log(trackedImage.name);
+            this.infoText.text = trackedImage.name;
         }
         //foreach(ARTrackedImage trackedImage in args.removed)
         //{
