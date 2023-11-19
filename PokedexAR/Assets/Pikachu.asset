@@ -28,12 +28,12 @@ MonoBehaviour:
     m_Name: pika
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 4829220273020636354
-      m_GuidHigh: 17583584302491241142
+      m_GuidLow: 4988460655411665113
+      m_GuidHigh: 442480197297244590
     m_SerializedTextureGuid:
-      m_GuidLow: 5653176647532023679
-      m_GuidHigh: 14280763786960804027
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+      m_GuidLow: 13782183589278850922
+      m_GuidHigh: 13406054229969161931
+    m_Size: {x: 0.3787879, y: 0.3}
+    m_SpecifySize: 1
     m_Name: relaxo
     m_Texture: {fileID: 0}
