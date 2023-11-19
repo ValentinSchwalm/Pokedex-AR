@@ -58,7 +58,6 @@ public class ImageRecognitionExample : MonoBehaviour
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
             currentActiveQR = trackedImage.referenceImage.name;
-            UpdateARImage(trackedImage, currentActiveQR);
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -67,58 +66,7 @@ public class ImageRecognitionExample : MonoBehaviour
             {
                 currentActiveQR = trackedImage.referenceImage.name;
                 imageTrackedText.text = currentActiveQR;
-                AssignGameObject(currentActiveQR, trackedImage.transform.position);
-            }
-            else
-            {
-                if (currentActiveQR != trackedImage.referenceImage.name)
-                {
-                    ReAssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
-                }
             }
         }
     }
-    private void UpdateARImage(ARTrackedImage trackedImage, String name)
-    {
-        imageTrackedText.text = trackedImage.referenceImage.name;
-        AssignGameObject(name, trackedImage.transform.position);
-
-    }
-
-    void AssignGameObject(string name, Vector3 newPosition)
-    {
-        if (arObjectsToPlace != null)
-        {
-            GameObject goARObject = arObjects[name];
-            goARObject.SetActive(true);
-            goARObject.transform.position = newPosition;
-            goARObject.transform.localScale = scaleFactor;
-            foreach (GameObject go in arObjects.Values)
-            {
-                //Debug.Log($"Go in arObjects.Values: {go.name}");
-                if (go.name != name)
-                {
-                    go.SetActive(false);
-                }
-            }
-        }
-    }
-    void ReAssignGameObject(string name, Vector3 newPosition)
-    {
-        if (arObjectsToPlace != null)
-        {
-            GameObject goARObject = arObjects[name];
-            goARObject.SetActive(true);
-            goARObject.transform.position = newPosition;
-            goARObject.transform.localScale = scaleFactor;
-            foreach (GameObject go in arObjects.Values)
-            {
-                if (go.name == name)
-                {
-                    go.SetActive(false);
-                }
-            }
-        }
-    }
-    private void Dismiss() => welcomePanel.SetActive(false);
 }
