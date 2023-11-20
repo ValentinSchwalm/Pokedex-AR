@@ -5,4 +5,9 @@ using UnityEngine;
 public class Pokemon : MonoBehaviour
 {
     [SerializeField] private string pokeName;
+
+    public string PokeName
+    {
+        get { return pokeName; }
+    }
 }

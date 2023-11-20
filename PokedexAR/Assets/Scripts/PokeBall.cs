@@ -37,6 +37,7 @@ public class PokeBall : MonoBehaviour
     private void Awake()
     {
         pokemonList = new Dictionary<string, GameObject>();
+
         for (int i = 0; i < pokemonNames.Length; i++)
         {
             pokemonList.Add(pokemonNames[i], pokemonModels[i]);
@@ -86,9 +87,13 @@ public class PokeBall : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!thrown)
+        {
+            return;
+        }
+
         if (collision.gameObject.tag == "floor")
         {
-            Destroy(pokeBall);
             Debug.Log("Destroyed");
             RaycastHit raycastHit;
             Physics.Raycast(pokeBallBody.position, Vector3.down, out raycastHit, 10, layerMask);
