@@ -10,6 +10,7 @@ public class ImageRecognitionExample : MonoBehaviour
     private ARTrackedImageManager imageManager;
 
     [SerializeField] private TextMeshProUGUI imageTrackedText;
+    [SerializeField] private PokeBall pokeBall;
 
     String currentActiveQR;
 
@@ -34,6 +35,7 @@ public class ImageRecognitionExample : MonoBehaviour
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
             currentActiveQR = trackedImage.referenceImage.name;
+            this.UpdatePokeball();
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -42,7 +44,17 @@ public class ImageRecognitionExample : MonoBehaviour
             {
                 currentActiveQR = trackedImage.referenceImage.name;
                 imageTrackedText.text = currentActiveQR;
+                this.UpdatePokeball();
             }
+        }
+    }
+
+    private void UpdatePokeball()
+    {
+        if (!this.pokeBall.Thrown)
+        {
+            this.pokeBall.CurrentPokemon = currentActiveQR;
+            this.pokeBall.gameObject.SetActive(true);
         }
     }
 }

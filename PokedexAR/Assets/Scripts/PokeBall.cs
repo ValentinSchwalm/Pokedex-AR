@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,21 +7,42 @@ public class PokeBall : MonoBehaviour
 {
     private float time;
     private bool thrown = false;
-    private Vector3 originalPosition;
     public Vector3 finalPosition;
     
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private GameObject pokeBall;
     [SerializeField] private Rigidbody pokeBallBody;
-    [SerializeField] private GameObject button;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private Transform pokeballHandle;
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private float throwForce;
+
+    private string currentPokemon;
+
+    [SerializeField] private GameObject[] pokemonModels;
+    [SerializeField] private string[] pokemonNames;
+
+    private Dictionary<string, GameObject> pokemonList;
+
+    public string CurrentPokemon
+    { 
+        get { return currentPokemon; }
+        set { currentPokemon = value; }
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool Thrown
+    { 
+        get { return thrown; }
+    }
+
+    private void Awake()
+    {
+        for (int i = 0; i < pokemonNames.Length; i++)
+        {
+            pokemonList.Add(pokemonNames[i], pokemonModels[i]);
+        }
+    }
+
+    private void Update()
     {
         time += Time.deltaTime;
         if (time >= 3 && thrown)
@@ -28,30 +50,33 @@ public class PokeBall : MonoBehaviour
             ResetPos();
         }
         
+        if (!thrown )
+        {
+            this.transform.position = pokeballHandle.position;
+        }
     }
 
     public void Throw()
     {
-        Debug.Log("throw");
-        originalPosition = pokeBallBody.position;
+        if (thrown)
+        {
+            return;
+        }
+
         pokeBallBody.useGravity = true;
-        pokeBallBody.velocity = new Vector3(0, 2, 5);
+        // pokeBallBody.velocity = new Vector3(0, 2, 5);
+        pokeBallBody.velocity = cameraTransform.forward * throwForce;
+        pokeBallBody.velocity += Vector3.up * 2;
         time = 0;    
         thrown = true;
-        button.SetActive(false);
     }
 
-    public void ResetPos()
+    private void ResetPos()
     {
         thrown = false;
-        Debug.Log("didn't spawn");
-        Debug.Log(originalPosition);
         pokeBallBody.useGravity = false;
-        pokeBallBody.position = originalPosition;
-        button.SetActive(true);
-    }
-
-    
+        gameObject.SetActive(false);
+    }      
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -62,6 +87,14 @@ public class PokeBall : MonoBehaviour
             RaycastHit raycastHit;
             Physics.Raycast(pokeBallBody.position, Vector3.down, out raycastHit, 10, layerMask);
             finalPosition = raycastHit.point;
+
+            SpawnPokemon();
+            ResetPos();
         }
+    }
+
+    private void SpawnPokemon()
+    {
+        Instantiate(this.pokemonList[currentPokemon], finalPosition, Quaternion.identity);
     }
 }

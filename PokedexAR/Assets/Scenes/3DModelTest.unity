@@ -559,6 +559,51 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 90604713564451634, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445881150829541820, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 862095543794675399, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203687561103354925, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840007914948537132, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436569731133577119, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476722140348966668, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751488442023503601, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415332704249785185, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4058736773916213908, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -609,10 +654,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4099072985899311509, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6601490438785546433, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
         type: 3}
       propertyPath: m_Name
       value: Pikachu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324722170828356190, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7931922859817965583, guid: 6798c1bf2a58a3f41a39a2602ead2df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
