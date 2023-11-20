@@ -36,9 +36,15 @@ public class PokeBall : MonoBehaviour
 
     private void Awake()
     {
+        pokemonList = new Dictionary<string, GameObject>();
         for (int i = 0; i < pokemonNames.Length; i++)
         {
             pokemonList.Add(pokemonNames[i], pokemonModels[i]);
+        }
+
+        foreach (var item in pokemonList)
+        {
+            print(item.Key);
         }
     }
 
