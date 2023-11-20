@@ -1,33 +1,48 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class ImageRecognitionExample : MonoBehaviour
 {
-    private ARTrackedImageManager _arTrackedImageManager;
+    private ARTrackedImageManager imageManager;
+
+    [SerializeField] private TextMeshProUGUI imageTrackedText;
+
+    String currentActiveQR;
+
 
     private void Awake()
     {
-        _arTrackedImageManager = FindObjectOfType<ARTrackedImageManager>();
+        imageManager = GetComponent<ARTrackedImageManager>();
     }
 
-    public void OnEnable()
+    private void OnEnable()
     {
-        _arTrackedImageManager.trackedImagesChanged += OnImageChanged;
+        imageManager.trackedImagesChanged += OnTrackedImagesChanged;
     }
 
-    public void OnDisable()
+    private void OnDisable()
     {
-        _arTrackedImageManager.trackedImagesChanged -= OnImageChanged;
+        imageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
-    public void OnImageChanged(ARTrackedImagesChangedEventArgs args)
+    private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        foreach (var trackedImage in args.added)
+        foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
-            Debug.Log(trackedImage.name);
+            currentActiveQR = trackedImage.referenceImage.name;
+        }
+
+        foreach (ARTrackedImage trackedImage in eventArgs.updated)
+        {
+            if (trackedImage.trackingState == TrackingState.Tracking)
+            {
+                currentActiveQR = trackedImage.referenceImage.name;
+                imageTrackedText.text = currentActiveQR;
+            }
         }
     }
 }

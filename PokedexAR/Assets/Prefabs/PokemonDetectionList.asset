@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: PokemonDetectionList
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5624485335518642412
+  m_GuidHigh: 56800382818092710
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5106620254116137848
+      m_GuidHigh: 7525383351421146527
+    m_SerializedTextureGuid:
+      m_GuidLow: 10467724837496288351
+      m_GuidHigh: 18394538232589551307
+    m_Size: {x: 0.3, y: 0.32608697}
+    m_SpecifySize: 1
+    m_Name: Blastoise
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4988460655411665113
+      m_GuidHigh: 442480197297244590
+    m_SerializedTextureGuid:
+      m_GuidLow: 10958625791639840000
+      m_GuidHigh: 3894989847340069944
+    m_Size: {x: 0.3, y: 0.23529413}
+    m_SpecifySize: 1
+    m_Name: Charizard
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4831654360234360717
+      m_GuidHigh: 4299035057053341103
+    m_SerializedTextureGuid:
+      m_GuidLow: 7643920156866145832
+      m_GuidHigh: 5825077508272856250
+    m_Size: {x: 0.3, y: 0.3896104}
+    m_SpecifySize: 1
+    m_Name: Dragonite
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5072962021609557909
+      m_GuidHigh: 3908398974533885623
+    m_SerializedTextureGuid:
+      m_GuidLow: 5153523432791288278
+      m_GuidHigh: 10340724766852432713
+    m_Size: {x: 0.3, y: 0.3071795}
+    m_SpecifySize: 1
+    m_Name: Gengar
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5114601530491891155
+      m_GuidHigh: 3507552191150420664
+    m_SerializedTextureGuid:
+      m_GuidLow: 1694506154736677125
+      m_GuidHigh: 6160722324772034088
+    m_Size: {x: 0.3, y: 0.36585367}
+    m_SpecifySize: 1
+    m_Name: Gyarados
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4685803617153978494
+      m_GuidHigh: 7166075305908943285
+    m_SerializedTextureGuid:
+      m_GuidLow: 17222993649629251940
+      m_GuidHigh: 5801749044800092009
+    m_Size: {x: 0.3, y: 0.28890675}
+    m_SpecifySize: 1
+    m_Name: Lapras
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5100813359600279750
+      m_GuidHigh: 12288306076101517741
+    m_SerializedTextureGuid:
+      m_GuidLow: 5779274728416532293
+      m_GuidHigh: 11437984542894278169
+    m_Size: {x: 0.3, y: 0.3674847}
+    m_SpecifySize: 1
+    m_Name: Mewtwo
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4808238473343981146
+      m_GuidHigh: 804524740652140461
+    m_SerializedTextureGuid:
+      m_GuidLow: 16142156523432194193
+      m_GuidHigh: 12769893902824173131
+    m_Size: {x: 0.3, y: 0.28125}
+    m_SpecifySize: 1
+    m_Name: Pikachu
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4968806894376340138
+      m_GuidHigh: 4545151849076148661
+    m_SerializedTextureGuid:
+      m_GuidLow: 3045659447182426997
+      m_GuidHigh: 5037529460554532888
+    m_Size: {x: 0.3, y: 0.23746702}
+    m_SpecifySize: 1
+    m_Name: Relaxo
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4946847294106191037
+      m_GuidHigh: 11316713263788456859
+    m_SerializedTextureGuid:
+      m_GuidLow: 2640341238900045899
+      m_GuidHigh: 17425822487391148313
+    m_Size: {x: 0.3, y: 0.23187098}
+    m_SpecifySize: 1
+    m_Name: Venusaur
+    m_Texture: {fileID: 0}
