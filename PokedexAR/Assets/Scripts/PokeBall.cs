@@ -94,7 +94,6 @@ public class PokeBall : MonoBehaviour
 
         if (collision.gameObject.tag == "floor")
         {
-            Debug.Log("Destroyed");
             RaycastHit raycastHit;
             Physics.Raycast(pokeBallBody.position, Vector3.down, out raycastHit, 10, layerMask);
             finalPosition = raycastHit.point;
