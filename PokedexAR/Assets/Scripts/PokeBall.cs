@@ -71,7 +71,6 @@ public class PokeBall : MonoBehaviour
         }
 
         pokeBallBody.useGravity = true;
-        // pokeBallBody.velocity = new Vector3(0, 2, 5);
         pokeBallBody.velocity = cameraTransform.forward * throwForce;
         pokeBallBody.velocity += Vector3.up * 2;
         time = 0;    
