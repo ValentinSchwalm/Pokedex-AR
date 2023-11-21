@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -572,6 +572,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 322483878447164794, guid: 861f678218402594d8770a93944353dd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 622aa787e3e247c43a02a182c25d2b2d, type: 2}
+    - target: {fileID: 638875929038383129, guid: 861f678218402594d8770a93944353dd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 622aa787e3e247c43a02a182c25d2b2d, type: 2}
     - target: {fileID: 4261814906826622801, guid: 861f678218402594d8770a93944353dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -627,6 +637,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blastoise
       objectReference: {fileID: 0}
+    - target: {fileID: 7268850755137183286, guid: 861f678218402594d8770a93944353dd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 622aa787e3e247c43a02a182c25d2b2d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -763,6 +778,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lapras
       objectReference: {fileID: 0}
+    - target: {fileID: 8575981788673230502, guid: 9f69b2ad3d92c6046b12e4a28a2ed400,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 622aa787e3e247c43a02a182c25d2b2d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1103,6 +1123,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8463203857100803207, guid: 79b68359f3f959842b57ed7887fd5466,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8463203857100803207, guid: 79b68359f3f959842b57ed7887fd5466,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 622aa787e3e247c43a02a182c25d2b2d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1116,6 +1146,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 705140005903468446, guid: 4100ffed12937e14e85a47a304f00048,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 622aa787e3e247c43a02a182c25d2b2d, type: 2}
     - target: {fileID: 1643167185049334383, guid: 4100ffed12937e14e85a47a304f00048,
         type: 3}
       propertyPath: m_IsActive
@@ -1201,6 +1236,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snorlax
       objectReference: {fileID: 0}
+    - target: {fileID: 9148846913030587297, guid: 4100ffed12937e14e85a47a304f00048,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 622aa787e3e247c43a02a182c25d2b2d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
